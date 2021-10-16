@@ -7,6 +7,7 @@ import {
 import ContactForm from "./contactForm/ContactForm";
 import ContactList from "./contactList/ContactList";
 import Filter from "./filter/Filter";
+import { ContactsFilterAndListWrapper } from "./AppStyled";
 
 const App = ({ contacts, filter, onAddNewContact, removeContactById }) => {
   useEffect(() => {
@@ -15,17 +16,16 @@ const App = ({ contacts, filter, onAddNewContact, removeContactById }) => {
 
   return (
     <div>
-      <h1>Phonebook</h1>
       <ContactForm onAddNewContact={onAddNewContact} />
+      <ContactsFilterAndListWrapper>
+        {contacts.length !== 0 && <Filter filter={filter} />}
 
-      <h2>Contacts</h2>
-      {contacts.length !== 0 && <Filter filter={filter} />}
-
-      <ContactList
-        contacts={contacts}
-        filterValue={filter}
-        removeContactById={removeContactById}
-      />
+        <ContactList
+          contacts={contacts}
+          filterValue={filter}
+          removeContactById={removeContactById}
+        />
+      </ContactsFilterAndListWrapper>
     </div>
   );
 };

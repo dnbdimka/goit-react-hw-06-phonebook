@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { filteredContacts } from "../redux/contacts/contactsActions";
+import { FilterStyled } from "./FilterStyled";
 
 const Filter = ({ onFilterInput }) => {
   const onFilterInputChange = (e) => {
@@ -10,10 +11,14 @@ const Filter = ({ onFilterInput }) => {
   };
 
   return (
-    <label>
-      Find contacts by name:
-      <input type="text" onChange={onFilterInputChange} />
-    </label>
+    <>
+      <FilterStyled>
+        <div class="filter-box">
+          <input id="filterInput" type="text" onChange={onFilterInputChange} />
+          <label for="filterInput">Find contacts by name</label>
+        </div>
+      </FilterStyled>
+    </>
   );
 };
 
