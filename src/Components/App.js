@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { connect } from "react-redux";
 import {
   addNewContact,
@@ -9,6 +9,10 @@ import ContactList from "./contactList/ContactList";
 import Filter from "./filter/Filter";
 
 const App = ({ contacts, filter, onAddNewContact, removeContactById }) => {
+  useEffect(() => {
+    localStorage.setItem("contacts", JSON.stringify(contacts));
+  });
+
   return (
     <div>
       <h1>Phonebook</h1>

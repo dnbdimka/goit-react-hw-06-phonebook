@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import styles from "./ContactForm.module.css";
 
 import { v4 as uuidv4 } from "uuid";
 
@@ -27,7 +28,7 @@ const ContactForm = ({ onAddNewContact }) => {
 
   return (
     <form onSubmit={handelSubmitForm}>
-      <label>
+      <label className={styles.form_label}>
         Name
         <input
           type="text"

@@ -1,17 +1,26 @@
-import { ADDCONTACT, REMOVECONTACT, FILTER } from "./contactsTypes";
+import { createAction } from "@reduxjs/toolkit";
 
-const addNewContact = (contact) => ({
-  type: ADDCONTACT,
-  payload: contact,
-});
+// import { ADDCONTACT, REMOVECONTACT, FILTER } from "./contactsTypes";
 
-const removeContactById = (id) => ({
-  type: REMOVECONTACT,
-  payload: id,
-});
+// const addNewContact = (contact) => ({
+//   type: ADDCONTACT,
+//   payload: contact,
+// });
 
-const filteredContacts = (query) => ({
-  type: FILTER,
-  payload: query,
-});
+const addNewContact = createAction("contacts/addContact");
+
+// const removeContactById = (id) => ({
+//   type: REMOVECONTACT,
+//   payload: id,
+// });
+
+const removeContactById = createAction("contacts/removeContact");
+
+// const filteredContacts = (query) => ({
+//   type: FILTER,
+//   payload: query,
+// });
+
+const filteredContacts = createAction("contacts/filteredContacts");
+
 export { addNewContact, removeContactById, filteredContacts };
