@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { filteredContacts } from "../redux/contacts/contactsActions";
+import { filteredContacts } from "../../redux/contacts/contactsActions";
 import { FilterStyled } from "./FilterStyled";
 
 const Filter = ({ onFilterInput }) => {

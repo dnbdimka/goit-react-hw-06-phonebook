@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import {
   addNewContact,
   removeContactById,
-} from "./redux/contacts/contactsActions";
+} from "../redux/contacts/contactsActions";
 import ContactForm from "./contactForm/ContactForm";
 import ContactList from "./contactList/ContactList";
 import Filter from "./filter/Filter";
