@@ -22,7 +22,6 @@ const ContactForm = ({ onAddNewContact }) => {
     contact.id = uuidv4();
 
     onAddNewContact(contact);
-    console.log(contact);
     setContact({ ...initialState });
   };
 
@@ -31,7 +30,7 @@ const ContactForm = ({ onAddNewContact }) => {
       <div className="login-box">
         <h2>Phonebook</h2>
         <form onSubmit={handelSubmitForm}>
-          <div class="user-box">
+          <div className="user-box">
             <input
               id="contactName"
               type="text"
@@ -44,7 +43,7 @@ const ContactForm = ({ onAddNewContact }) => {
             />
             <label for="contactName">Name</label>
           </div>
-          <div class="user-box">
+          <div className="user-box">
             <input
               className="form-control-material"
               id="contactPhone"

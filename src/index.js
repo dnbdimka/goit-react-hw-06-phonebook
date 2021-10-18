@@ -5,8 +5,6 @@ import App from "./Components/App";
 import store from "./Components/redux/store";
 import "./index.css";
 
-console.log(store.getState());
-
 ReactDOM.render(
   <Provider store={store}>
     <App />

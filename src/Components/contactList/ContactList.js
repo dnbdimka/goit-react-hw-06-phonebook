@@ -4,7 +4,6 @@ import { ContactsListStyle } from "./ContactListStyled";
 
 const ContactList = ({ contacts, filterValue, removeContactById }) => {
   const newArr = [...contacts].filter((contact) => {
-    console.log(contact.name);
     return contact.name.toLowerCase().includes(filterValue.toLowerCase());
   });
 

@@ -13,7 +13,7 @@ const Filter = ({ onFilterInput }) => {
   return (
     <>
       <FilterStyled>
-        <div class="filter-box">
+        <div className="filter-box">
           <input id="filterInput" type="text" onChange={onFilterInputChange} />
           <label for="filterInput">Find contacts by name</label>
         </div>
